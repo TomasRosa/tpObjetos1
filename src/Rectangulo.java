@@ -5,6 +5,7 @@ public class Rectangulo
 
     public Rectangulo (double ancho, double alto)
     {
+        //constructor
         this.ancho = ancho;
         this.alto = alto;
     }

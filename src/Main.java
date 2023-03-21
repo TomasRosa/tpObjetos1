@@ -18,6 +18,7 @@ public class Main {
             case 2:
             {
                 ejercicio2();
+                ///ejercicio2
                 break;
             }
             case 3:
