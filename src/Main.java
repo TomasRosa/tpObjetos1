@@ -26,6 +26,10 @@ public class Main {
                 ejercicio3();
                 break;
             }
+            case 4:
+            {
+                ejercico4();
+            }
         }
     }
 
@@ -90,5 +94,23 @@ public class Main {
         double precioTotal = item.calcularPrecioCantidadUnitario(cantidad, precioUnitario);
 
         item.mostrar(item.getId(), descripcion, cantidad, precioUnitario, precioTotal);
+    }
+    public static void ejercico4 ()
+    {
+        Cuenta banco = new Cuenta("Tomas");
+        banco = new Cuenta(5000); ///preguntar
+
+        double balance = banco.credito(3000);
+        double balance2 = banco.credito2(5000,3000);
+        System.out.println("Tu balance con el dinero depositado es de: " + balance);
+        System.out.println("Tu balance con el dinero depositado es de: " + balance2);
+
+        double balanceDebito = banco.debito(6000);
+        double balanceDebito2 = banco.debito2(5000,6000);
+
+        System.out.println("Tu balance con el dinero retirado es de: " + balanceDebito);
+        System.out.println("Tu balance con el dinero retirado es de " + balanceDebito2);
+
+        banco.mostrarCaracteristicasCuenta();
     }
 }

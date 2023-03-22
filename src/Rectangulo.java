@@ -15,19 +15,23 @@ public class Rectangulo
         this.alto = alto;
     }
 
-    public double getAncho() {
+    public double getAncho()
+    {
         return ancho;
     }
 
-    public void setAncho(double ancho) {
+    public void setAncho(double ancho)
+    {
         this.ancho = ancho;
     }
 
-    public double getAlto() {
+    public double getAlto()
+    {
         return alto;
     }
 
-    public void setAlto(double alto) {
+    public void setAlto(double alto)
+    {
         this.alto = alto;
     }
     public double area (double alto, double ancho)
