@@ -8,27 +8,33 @@ public class Cuenta
 
     private double balance;
     ///Setters y Getters del objeto
-    public int getIdentificador() {
+    public int getIdentificador()
+    {
         return identificador;
     }
 
-    public void setIdentificador(int identificador) {
+    public void setIdentificador(int identificador)
+    {
         this.identificador = identificador;
     }
 
-    public String getNombre() {
+    public String getNombre()
+    {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre)
+    {
         this.nombre = nombre;
     }
 
-    public double getBalance() {
+    public double getBalance()
+    {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(double balance)
+    {
         this.balance = balance;
     }
     ///Constructores del objeto
@@ -50,8 +56,8 @@ public class Cuenta
     }
     public double credito2 (double balance, double dineroADepostar)
     {
-        balance = balance + dineroADepostar;
-        return balance;
+            balance = balance + dineroADepostar;
+            return balance;
     }
     public double debito (double dineroARetirar)
     {

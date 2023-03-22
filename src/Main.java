@@ -97,19 +97,18 @@ public class Main {
     }
     public static void ejercico4 ()
     {
-        Cuenta banco = new Cuenta("Tomas");
-        banco = new Cuenta(5000); ///preguntar
+        double balanceInicial = 5000;
 
-        double balance = banco.credito(3000);
-        double balance2 = banco.credito2(5000,3000);
-        System.out.println("Tu balance con el dinero depositado es de: " + balance);
-        System.out.println("Tu balance con el dinero depositado es de: " + balance2);
+        Cuenta banco = new Cuenta(balanceInicial);
+        banco = new Cuenta("Tomas");
 
-        double balanceDebito = banco.debito(6000);
-        double balanceDebito2 = banco.debito2(5000,6000);
+        double balance = banco.credito2(balanceInicial, 3000);
+        banco.setBalance(balance);
+        System.out.println("Tu balance con el dinero depositado es de: " + banco.getBalance());
 
-        System.out.println("Tu balance con el dinero retirado es de: " + balanceDebito);
-        System.out.println("Tu balance con el dinero retirado es de " + balanceDebito2);
+        double balanceDebito = banco.debito2(banco.getBalance(), 5000);
+        banco.setBalance(balanceDebito);
+        System.out.println("Tu balance con el dinero retirado es de: " + banco.getBalance());
 
         banco.mostrarCaracteristicasCuenta();
     }
