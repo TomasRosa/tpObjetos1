@@ -30,6 +30,10 @@ public class Main {
             {
                 ejercico4();
             }
+            case 5:
+            {
+                ejercicio5();
+            }
         }
     }
 
@@ -111,5 +115,43 @@ public class Main {
         System.out.println("Tu balance con el dinero retirado es de: " + banco.getBalance());
 
         banco.mostrarCaracteristicasCuenta();
+    }
+    ///No se utilizar los constructores que no tienen parametros.
+    public static void ejercicio5 ()
+    {
+        Scanner scan = new Scanner(System.in);
+        Hora hora = new Hora();
+
+        int hora2;
+        int minuto;
+        int segundo;
+
+        do
+        {
+            System.out.println("Ingrese una hora.");
+            hora2 = scan.nextInt();
+        }while(hora.validarHora(hora2) == 1);
+        do
+        {
+            System.out.println("Ingrese un minuto.");
+            minuto = scan.nextInt();
+        }while(hora.validarMinutoSegundo(minuto) == 1);
+        do
+        {
+            System.out.println("Ingrese un segundo.");
+            segundo = scan.nextInt();
+        }while(hora.validarMinutoSegundo(segundo)== 1);
+
+        hora.setHora(hora2);
+        hora.setMinuto(minuto);
+        hora.setSegundo(segundo);
+
+        hora.imprimirHora();
+        segundo = hora.retrocederUnSegundo();
+        hora.setSegundo(segundo);
+        System.out.println("Segundo retrocedido: " + segundo);
+        segundo = hora.avanzarUnSegundo();
+        hora.setSegundo(segundo);
+        System.out.println("Segundo avanzado: " + segundo);
     }
 }
